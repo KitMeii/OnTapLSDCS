@@ -1,4 +1,4 @@
-# HƯỚNG DẪN DEPLOY — Website ôn tập Lịch sử Đảng Cộng sản Việt Nam (V12)
+# HƯỚNG DẪN DEPLOY — Website ôn tập Lịch sử Đảng Cộng sản Việt Nam (V13)
 
 Tài liệu gồm 3 phần:
 
@@ -14,12 +14,17 @@ Tài liệu gồm 3 phần:
 
 ## Thông tin chung về website hiện tại
 
+| Mục | Giá trị |
+|---|---|
+| Repository GitHub | https://github.com/KitMeii/OnTapLSDCS (Public, nhánh `main`) |
+| Link website (GitHub Pages) | **https://kitmeii.github.io/OnTapLSDCS/** |
+| Thư mục trên máy (chứa trực tiếp `index.html`) | `D:\Nam4_26_27\HOCKY_I_2627\LSĐCSVN\LichSuDangStudy\LichSuDangStudy_CodeWeb` |
+
 - **Loại web:** web tĩnh — chỉ gồm HTML, CSS, JavaScript, ảnh, file MP3. Không có máy chủ xử lý, không có cơ sở dữ liệu.
 - **Người xem cần gì:** chỉ cần thiết bị có Internet và trình duyệt (Chrome, Edge, Safari, Cốc Cốc…). Không cài đặt gì.
 - **Dung lượng đưa lên:** khoảng **33 MB / 229 file** (audio bài giảng 29 MB, mỗi bài dưới 7 phút).
-- **Thư mục cần đưa lên:** thư mục **chứa trực tiếp file `index.html`**:
-  `...\LichSuDangStudy\LichSuDangStudy_CodeWeb`
-- **Không đưa lên:** `tools/.tts-cache/` (bộ nhớ tạm khi tạo giọng đọc, khoảng 63 MB) — đã được loại tự động bởi file `.gitignore`.
+- **Không đưa lên:** `tools/.tts-cache/` (bộ nhớ tạm khi tạo giọng đọc, khoảng 63 MB) và `tools/.timing/build-*.log` — đã được loại tự động bởi file `.gitignore`.
+- **Chỉ đưa thư mục web**, không đưa thư mục cha `LichSuDangStudy` (trong đó có `_luu-tru/`, `tai-lieu-du-an/` là tài liệu nội bộ).
 
 ### Những phần cần Internet khi xem
 
@@ -36,71 +41,75 @@ Mỗi bài giảng tốn khoảng **1–2 MB dữ liệu**; file MP3 chỉ tải
 
 # PHẦN A — DEPLOY BẢN HIỆN TẠI (MIỄN PHÍ)
 
-Khuyên dùng **Cách A1 (GitHub Pages)**: miễn phí, link cố định, cập nhật dễ.
-Không nên tải lên qua trang web github.com vì trình tải lên chỉ nhận **100 file/lần** (web có 229 file) → dùng **GitHub Desktop**.
+Dùng **GitHub Pages**: miễn phí, link cố định, cập nhật bằng `git push`.
+Không tải lên qua nút *Upload files* trên github.com vì trình tải lên chỉ nhận **100 file/lần** (web có 229 file).
 
-## A1. GitHub Pages bằng GitHub Desktop
+## A1. GitHub Pages bằng Git dòng lệnh (cách đang dùng)
 
 ### Bước 0 — Chuẩn bị (làm 1 lần)
-1. Có tài khoản GitHub (đăng ký: https://github.com/signup). **Tên tài khoản sẽ xuất hiện trong đường link**, nên chọn tên gọn, ví dụ `tuankiet-vn`.
-2. Cài **GitHub Desktop** (https://desktop.github.com) — máy hiện đã có sẵn.
-3. Mở GitHub Desktop → **File → Options → Accounts → Sign in** → đăng nhập GitHub.
+1. Có tài khoản GitHub — hiện dùng tài khoản **KitMeii**.
+2. Máy đã cài **Git** (kiểm tra: `git --version`).
+3. Tạo repository **trống** tại https://github.com/new: tên `OnTapLSDCS`, chọn **Public**, **không** tích *Add a README / .gitignore / license* (thư mục web đã có sẵn các file này).
 
-### Bước 1 — Tạo repository từ thư mục web
-1. **File → Add local repository…** → **Choose…** → chọn thư mục chứa `index.html` (xem mục *Thông tin chung*) → **Add repository**.
-2. Xuất hiện thông báo *"This directory does not appear to be a Git repository"* → bấm dòng chữ **create a repository** ngay trong thông báo.
-3. Điền:
-   - **Name:** tên ngắn, không dấu, không khoảng trắng — ví dụ `ontaplichsudang` (sẽ nằm trong link).
-   - **Description:** `Website ôn tập Lịch sử Đảng Cộng sản Việt Nam` (tùy chọn).
-   - **Git ignore:** `None` (thư mục đã có sẵn `.gitignore`).
-   - **License:** `None`.
-4. Bấm **Create repository**.
+### Bước 1 — Đẩy code lần đầu
+Mở Git Bash (hoặc terminal trong VS Code) và chạy lần lượt:
+```bash
+cd "D:/Nam4_26_27/HOCKY_I_2627/LSĐCSVN/LichSuDangStudy/LichSuDangStudy_CodeWeb"
+git init -b main
+git add .
+git status            # kiểm tra: khoảng 229 file, KHÔNG có tools/.tts-cache
+git commit -m "Website ôn tập Lịch sử Đảng V13"
+git remote add origin https://github.com/KitMeii/OnTapLSDCS.git
+git push -u origin main
+```
+- Lần push đầu, Windows mở cửa sổ đăng nhập GitHub → đăng nhập bằng tài khoản **KitMeii** (chủ repository).
+- Nếu `git status` có `tools/.tts-cache` → **dừng lại, chưa commit**, kiểm tra file `.gitignore`.
 
-> Muốn link **không có phần đuôi** `/ontaplichsudang/` thì đặt **Name** đúng bằng `ten-tai-khoan.github.io` (ví dụ `tuankiet-vn.github.io`). Link sẽ là `https://tuankiet-vn.github.io`.
-
-### Bước 2 — Commit lần đầu
-1. Cột trái hiển thị khoảng 229 file thay đổi. **Không thấy** `tools/.tts-cache` là đúng.
-2. Ô **Summary** (góc dưới trái): `Website ôn tập Lịch sử Đảng V12`.
-3. Bấm **Commit to main**.
-
-### Bước 3 — Publish lên GitHub
-1. Bấm **Publish repository** (thanh trên cùng).
-2. **Bỏ tích** ô *Keep this code private* — GitHub Pages miễn phí yêu cầu repository **Public**.
-3. Bấm **Publish repository**, chờ tải xong (~33 MB, vài phút tùy mạng).
-
-### Bước 4 — Bật GitHub Pages
-1. GitHub Desktop: **Repository → View on GitHub** (mở trình duyệt).
-2. Tab **Settings** → menu trái **Pages**.
-3. Mục **Build and deployment**:
+### Bước 2 — Bật GitHub Pages
+1. Mở https://github.com/KitMeii/OnTapLSDCS/settings/pages
+2. Mục **Build and deployment**:
    - **Source:** `Deploy from a branch`
    - **Branch:** `main` — thư mục `/ (root)` → **Save**.
-4. Chờ 1–3 phút, tải lại trang. Dòng **"Your site is live at …"** hiện link:
-   `https://ten-tai-khoan.github.io/ontaplichsudang/`
-5. (Khuyên dùng) tích **Enforce HTTPS** nếu có.
+3. Theo dõi tab **Actions** của repository: lượt chạy *pages build and deployment* có dấu ✓ xanh là xong (thường 1–3 phút).
+4. Tải lại trang Settings → Pages: dòng **"Your site is live at …"** hiện link **https://kitmeii.github.io/OnTapLSDCS/**
+5. Tích **Enforce HTTPS** nếu có.
 
-### Bước 5 — Kiểm tra sau deploy
+> Link có phần đuôi `/OnTapLSDCS/` vì đó là tên repository. Muốn link gọn `https://kitmeii.github.io` thì repository phải đặt tên đúng bằng `kitmeii.github.io`.
+
+### Bước 3 — Kiểm tra sau deploy
 - [ ] Mở link trên máy tính, bấm qua 5 mục: **Tổng quan · Lịch sử · Tổ chức · Đề cương · Trắc nghiệm**.
 - [ ] **Lịch sử** → chọn thời kỳ → **Nghe bài giảng** (giọng nữ) và **Xem dạng video** (giọng nam) đều có tiếng.
+- [ ] **Lịch sử** → **Mục lục** → bấm một mục (ví dụ *Hội nghị hợp nhất*) → trang cuộn đúng tới nội dung.
 - [ ] **Đề cương** → mở 1 vấn đề → thấy **Điểm chú ý** và **Câu hỏi phụ có thể được hỏi**.
 - [ ] **Trắc nghiệm** → vào 1 bộ đề → chọn đáp án, đồng hồ đếm ngược chạy.
 - [ ] Cuối trang có **mã QR** → quét bằng điện thoại → kiểm tra bản mobile; xem video thì xoay ngang.
 - [ ] Gửi link cho 1–2 người khác mở thử bằng mạng của họ.
 
-### Bước 6 — Cập nhật nội dung về sau
-1. Sửa file trong thư mục web → lưu.
-2. Mở GitHub Desktop → file sửa tự hiện ở cột trái.
-3. Ghi **Summary** (ví dụ `Sửa đề cương vấn đề 5`) → **Commit to main** → **Push origin**.
-4. Chờ 1–2 phút, web tự cập nhật; link giữ nguyên.
-5. Nếu vẫn thấy bản cũ: `Ctrl + F5` (máy tính) hoặc mở tab ẩn danh (điện thoại).
+### Bước 4 — Cập nhật nội dung về sau
+```bash
+cd "D:/Nam4_26_27/HOCKY_I_2627/LSĐCSVN/LichSuDangStudy/LichSuDangStudy_CodeWeb"
+git add .
+git commit -m "Mô tả thay đổi, ví dụ: Sửa đề cương vấn đề 5"
+git push
+```
+- Chờ 1–2 phút (xem tab **Actions**), web tự cập nhật; link giữ nguyên.
+- Nếu vẫn thấy bản cũ: `Ctrl + F5` (máy tính) hoặc mở tab ẩn danh (điện thoại).
 
-> **Sửa lời giảng** (`data/lectures.js`) thì phải tạo lại audio **trước khi Push**:
+> **Sửa lời giảng** (`data/lectures.js`) thì phải tạo lại audio **trước khi push**:
 > ```bash
 > pip install edge-tts                       # cài 1 lần
 > python tools/build_lectures.py             # giọng nữ  -> assets/audio/lich-su-*.mp3
 > python tools/build_lectures.py --nam       # giọng nam -> assets/audio/lich-su-*-nam.mp3 (dùng cho video)
 > python tools/build_lectures.py --nam 1930-1935   # chỉ tạo lại 1 thời kỳ
 > ```
-> Dịch vụ giọng đọc đôi khi từ chối yêu cầu; script tự thử lại. Nếu báo *LỖI* ở thời kỳ nào, chạy lại riêng thời kỳ đó.
+> - Dịch vụ giọng đọc đôi khi từ chối yêu cầu; script tự thử lại. Nếu báo *LỖI* ở thời kỳ nào, chạy lại riêng thời kỳ đó.
+> - Dịch vụ đôi khi **treo** (lệnh chạy mãi không in thêm dòng *xong*). Khi đó dừng lệnh (`Ctrl + C`) rồi chạy lại — các đoạn đã tạo được giữ trong `tools/.tts-cache` nên không phải làm lại từ đầu. Có thể chạy từng thời kỳ kèm giới hạn thời gian: `timeout 300 python tools/build_lectures.py --nam 1945-1954`.
+> - Mỗi bài giảng nên dưới 7 phút (khoảng 1.400 từ trở xuống).
+
+## A1b. Cách thay thế — GitHub Desktop (không cần gõ lệnh)
+1. **File → Add local repository…** → chọn thư mục web (chứa `index.html`). Nếu đã chạy `git init` ở A1 thì repository được nhận ngay.
+2. Thay đổi hiện ở cột trái → ghi **Summary** → **Commit to main** → **Push origin**.
+3. Repository chưa có trên GitHub thì bấm **Publish repository** và **bỏ tích** *Keep this code private* (GitHub Pages miễn phí cần repository Public). Bật Pages như **Bước 2** ở trên.
 
 ## A2. Cách thay thế — Netlify Drop (không cần GitHub)
 1. Truy cập https://app.netlify.com/drop, đăng nhập (email hoặc Google).
@@ -115,6 +124,8 @@ Không nên tải lên qua trang web github.com vì trình tải lên chỉ nh�
 |---|---|
 | Link báo **404** | Chờ thêm 2–3 phút; kiểm tra Pages chọn `main` + `/ (root)`; `index.html` phải nằm ngay gốc repository (không nằm trong thư mục con). |
 | Chỉ có nút **Push origin**, không có Publish | Repository đã publish rồi → bấm **Push origin**. |
+| `git push` báo *rejected* / *fetch first* | Trên GitHub có thay đổi mà máy chưa có (ví dụ sửa trực tiếp trên web) → chạy `git pull --rebase` rồi `git push` lại. |
+| `git push` báo *Permission denied* / 403 | Đang đăng nhập sai tài khoản → Windows: mở *Credential Manager* → xóa mục `git:https://github.com` → push lại và đăng nhập bằng **KitMeii**. |
 | Bấm nghe **không có tiếng** | Trình duyệt chỉ phát âm thanh sau khi người dùng bấm; bấm lại nút; tắt chế độ im lặng của điện thoại. |
 | Ảnh tư liệu phong trào không hiện | Trang báo chặn tải ảnh từ web khác; web tự thay ảnh minh họa — không ảnh hưởng nội dung. |
 | Giao diện cũ sau khi cập nhật | Bộ nhớ đệm trình duyệt → `Ctrl + F5` / tab ẩn danh. |
@@ -148,7 +159,7 @@ Mục tiêu: thay `ten-tai-khoan.github.io/ontaplichsudang` bằng link riêng, 
 
 ## B3. Trỏ tên miền về GitHub Pages
 
-Ví dụ tên miền `ontaplichsudang.id.vn`, tài khoản GitHub `tuankiet-vn`.
+Ví dụ tên miền `ontaplichsudang.id.vn`, tài khoản GitHub `KitMeii`.
 
 **Trên GitHub:**
 1. Repository → **Settings → Pages → Custom domain** → nhập `ontaplichsudang.id.vn` → **Save**.
@@ -162,7 +173,7 @@ Ví dụ tên miền `ontaplichsudang.id.vn`, tài khoản GitHub `tuankiet-vn`.
 | A | `@` | `185.199.109.153` | 3600 |
 | A | `@` | `185.199.110.153` | 3600 |
 | A | `@` | `185.199.111.153` | 3600 |
-| CNAME | `www` | `tuankiet-vn.github.io` | 3600 |
+| CNAME | `www` | `kitmeii.github.io` | 3600 |
 
 (Tùy chọn, hỗ trợ IPv6 — thêm 4 bản ghi `AAAA` cho `@`: `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`.)
 
@@ -175,7 +186,7 @@ Ví dụ tên miền `ontaplichsudang.id.vn`, tài khoản GitHub `tuankiet-vn`.
 **Kiểm tra DNS** (Command Prompt / PowerShell):
 ```bash
 nslookup ontaplichsudang.id.vn        # phải trả về các IP 185.199.10x.153
-nslookup www.ontaplichsudang.id.vn    # phải trỏ về tuankiet-vn.github.io
+nslookup www.ontaplichsudang.id.vn    # phải trỏ về kitmeii.github.io
 ```
 
 ## B4. Trỏ tên miền về Netlify / Cloudflare Pages (nếu dùng)
@@ -353,7 +364,7 @@ psql postgresql://lsd_app:MAT_KHAU_MANH@127.0.0.1:5432/lichsudang -f backend/mig
 ```bash
 sudo mkdir -p /var/www/ontaplichsudang && sudo chown deploy: /var/www/ontaplichsudang
 cd /var/www/ontaplichsudang
-git clone https://github.com/tuankiet-vn/ontaplichsudang.git .
+git clone https://github.com/KitMeii/OnTapLSDCS.git .
 cd backend && npm ci --omit=dev
 cp .env.example .env && nano .env          # điền mật khẩu CSDL, JWT_SECRET thật
 pm2 start src/server.js --name lsd-api
