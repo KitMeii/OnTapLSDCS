@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#7b1018"/><stop offset="1" stop-color="#c22b30"/></linearGradient><pattern id="p" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#ffffff" opacity=".06"/></pattern></defs>
+<rect width="800" height="520" rx="32" fill="url(#g)"/><rect width="800" height="520" rx="32" fill="url(#p)"/>
+<circle cx="400" cy="150" r="64" fill="#f7d34a" opacity=".95"/><path d="M365 168c28-66 89-65 115-21-36-13-67-4-92 31z" fill="#9b161f"/><path d="M374 118l18 28 42-5-30 25 8 40-24-30-38 15 22-31z" fill="#9b161f" opacity=".9"/>
+<text x="400" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Khởi nghĩa Yên Bái</text>
+<text x="400" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#ffd968">1858–1930</text>
+<text x="400" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" opacity=".82">Minh họa học tập · Lịch sử Đảng Cộng sản Việt Nam</text>
+</svg>

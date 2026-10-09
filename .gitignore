@@ -1,0 +1,4 @@
+# Bộ nhớ tạm khi tạo giọng đọc bằng tools/build_lectures.py — không cần đưa lên web
+tools/.tts-cache/
+tools/.timing/build-*.log
+__pycache__/

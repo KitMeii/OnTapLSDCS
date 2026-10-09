@@ -1,0 +1,281 @@
+{
+  "overview": {
+    "33.jpg": "Ảnh do người dùng chỉ định; dùng duy nhất tại hero Tổng quan."
+  },
+  "general_secretaries": {
+    "Trần Phú": "assets/images/official/leader/tran-phu.png",
+    "Lê Hồng Phong": "assets/images/official/leader/le-hong-phong.png",
+    "Hà Huy Tập": "assets/images/official/leader/ha-huy-tap.png",
+    "Nguyễn Văn Cừ": "assets/images/official/leader/nguyen-van-cu.png",
+    "Trường Chinh": "assets/images/official/leader/truong-chinh.png",
+    "Hồ Chí Minh": "assets/images/official/leader/ho-chi-minh.png",
+    "Lê Duẩn": "assets/images/official/leader/le-duan.png",
+    "Nguyễn Văn Linh": "assets/images/official/leader/nguyen-van-linh.png",
+    "Đỗ Mười": "assets/images/official/leader/do-muoi.png",
+    "Lê Khả Phiêu": "assets/images/official/leader/le-kha-phieu.png",
+    "Nông Đức Mạnh": "https://imgnvsk.vnanet.vn/MediaUpload/Org/2023/08/19/m06-2346-nong-duc-manh19-15-3-10.jpg",
+    "Nguyễn Phú Trọng": "https://image.vietnamnews.vn/uploadvnnews/Article/Thanh_Hai/2019/2/11/vna_potal_tong_bi_thu_chu_tich_nuoc_nguyen_phu_trong_dang_vung_manh_dat_nuoc_phat_trien_dan_toc_truong_ton_370287748170314pm-1.jpg",
+    "Tô Lâm": "https://worldleaders.columbia.edu/sites/worldleaders.columbia.edu/files/styles/cu_crop/public/content/profiles/Official%20portrait%20of%20General%20Secretary%2C%20President%20To%20Lam_500x500.jpg.webp?itok=7qwHsGYT"
+  },
+  "organization_verified_remote": {
+    "Nguyễn Anh Tuấn": "https://en-cdn.nhandan.vn/images/3c6b1d7d6cd77f0dc549536a41e2cb9b914b3e970a8d0aec6f5c47b7cae7a5b5ed42c830bc65a21a551ad65537125fe5f9c8da70371f3063a883c31ec4098155/img-1725-9314.jpg.webp",
+    "Lương Quốc Đoàn": "https://danviet.ex-cdn.com/files/f1/296231569849192448/2023/12/26/chu-tich-hoi-nong-dan-viet-nam-luong-quoc-doan-1703555891677995880242.jpg",
+    "Bùi Quang Huy": "https://thanhnien.mediacdn.vn/Uploaded/vutho/2022_12_12/huy-co-doan-6210.jpg",
+    "Bế Xuân Trường": "https://cly.1cdn.vn/2022/12/31/xuan-trong.jpeg"
+  },
+  "portraits_v12": {
+    "note": "V12.1: 49/50 chân dung dùng ảnh chân dung chính thức tải từ tulieuvankien.dangcongsan.vn (Tư liệu – Văn kiện Đảng), giữ nguyên bố cục ảnh gốc (không cắt từ ảnh báo chí). Bế Xuân Trường: ảnh chân dung Wikimedia Commons. Nguồn duy nhất trong code: data/portraits.js.",
+    "items": {
+      "Bùi Quang Huy": {
+        "file": "assets/images/official/leader/bui-quang-huy.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260202/bui-quang-huy_4c240.jpg"
+      },
+      "Bùi Thị Minh Hoài": {
+        "file": "assets/images/official/leader/bui-thi-minh-hoai.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260129/mduc6655-bui-thi-minh-hoai_76e12.jpg"
+      },
+      "Bế Xuân Trường": {
+        "file": "assets/images/official/leader/be-xuan-truong.jpg",
+        "source": "Wikimedia Commons – File:Bexuantruong.jpg",
+        "page": "https://vi.wikipedia.org/wiki/Bế_Xuân_Trường"
+      },
+      "Hoàng Minh Sơn": {
+        "file": "assets/images/official/leader/hoang-minh-son.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260127/hoang-minh-son_e482b.jpg"
+      },
+      "Hoàng Thanh Tùng": {
+        "file": "assets/images/official/leader/hoang-thanh-tung.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260127/hoang-thanh-tung_408de.jpg"
+      },
+      "Hà Huy Tập": {
+        "file": "assets/images/official/leader/ha-huy-tap.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/6dc5370300bc284319855e986303fa17Ha_Huy_Tap.jpg"
+      },
+      "Hồ Chí Minh": {
+        "file": "assets/images/official/leader/ho-chi-minh.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/0d106c8a03b55e6996a5db0944ab5ad6Ho_20Chi_20Minh.jpg"
+      },
+      "Lâm Thị Phương Thanh": {
+        "file": "assets/images/official/leader/lam-thi-phuong-thanh.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260122/lam-thi-phuong-thanh_addfd.jpg"
+      },
+      "Lê Duẩn": {
+        "file": "assets/images/official/leader/le-duan.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/1e3e2aea37bb580d1672a935bc7cb01eLe_Duan.jpg"
+      },
+      "Lê Hoài Trung": {
+        "file": "assets/images/official/leader/le-hoai-trung.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260128/le-hoai-trung_6b35e.jpg"
+      },
+      "Lê Hồng Phong": {
+        "file": "assets/images/official/leader/le-hong-phong.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/5410e1e93c54989fee6fef23d8217f05Le_Hong_Phong.jpg"
+      },
+      "Lê Khả Phiêu": {
+        "file": "assets/images/official/leader/le-kha-phieu.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/4b78f6d85fc2a70deed81970d8b7b2a4dc_LKPhieu.jpg"
+      },
+      "Lê Minh Hưng": {
+        "file": "assets/images/official/leader/le-minh-hung.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260129/le-minh-hung_14fd8.jpg"
+      },
+      "Lê Minh Trí": {
+        "file": "assets/images/official/leader/le-minh-tri.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260128/le-minh-tri_2a88d.jpg"
+      },
+      "Lê Mạnh Hùng": {
+        "file": "assets/images/official/leader/le-manh-hung.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260127/le-manh-hung_e8aa9.jpg"
+      },
+      "Lê Thị Thủy": {
+        "file": "assets/images/official/leader/le-thi-thuy.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260127/le-thi-thuy_efa40.jpg"
+      },
+      "Lương Quốc Đoàn": {
+        "file": "assets/images/official/leader/luong-quoc-doan.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260115/luong-quoc-doan_0aa88.jpg"
+      },
+      "Lương Tam Quang": {
+        "file": "assets/images/official/leader/luong-tam-quang.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260128/luong-tam-quang_59319.jpg"
+      },
+      "Nguyễn Anh Tuấn": {
+        "file": "assets/images/official/leader/nguyen-anh-tuan.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260127/nguyen-anh-tuan_7bd77.jpg"
+      },
+      "Nguyễn Duy Ngọc": {
+        "file": "assets/images/official/leader/nguyen-duy-ngoc.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260526/Nguyen_Duy_Ngoc_f52a7__1__dc773.jpg"
+      },
+      "Nguyễn Huy Tiến": {
+        "file": "assets/images/official/leader/nguyen-huy-tien.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260127/nguyen-huy-tien_3a655.jpg"
+      },
+      "Nguyễn Hải Ninh": {
+        "file": "assets/images/official/leader/nguyen-hai-ninh.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260120/nguyen-hai-ninh_48da5.jpg"
+      },
+      "Nguyễn Hữu Nghĩa": {
+        "file": "assets/images/official/leader/nguyen-huu-nghia.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260120/nguyen-huu-nghia_2b448.png"
+      },
+      "Nguyễn Phú Trọng": {
+        "file": "assets/images/official/leader/nguyen-phu-trong.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/d3f5fe5d73ff32986aa931f579ee7050dc_NPT.jpg"
+      },
+      "Nguyễn Quốc Đoàn": {
+        "file": "assets/images/official/leader/nguyen-quoc-doan.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260123/nguyen-quoc-doan_b2078.jpg"
+      },
+      "Nguyễn Thanh Nghị": {
+        "file": "assets/images/official/leader/nguyen-thanh-nghi.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260129/nguyen-thanh-nghi_a39ca.jpg"
+      },
+      "Nguyễn Tiến Hải": {
+        "file": "assets/images/official/leader/nguyen-tien-hai.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260119/nguyen-tien-hai_94039.jpg"
+      },
+      "Nguyễn Trọng Nghĩa": {
+        "file": "assets/images/official/leader/nguyen-trong-nghia.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260225/nguyen-trong-nghia_448b1.jpg"
+      },
+      "Nguyễn Tân Cương": {
+        "file": "assets/images/official/leader/nguyen-tan-cuong.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260115/nguyen-tan-cuong-dai-tuong1_a9558.png"
+      },
+      "Nguyễn Văn Cừ": {
+        "file": "assets/images/official/leader/nguyen-van-cu.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/c3bfe9aebc1b5c868a96ae79e3889910Nguyen_Van_Cu.jpg"
+      },
+      "Nguyễn Văn Linh": {
+        "file": "assets/images/official/leader/nguyen-van-linh.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/99bb4949a2469b81820fb7d39b5b66a9Nguyen_Van_Linh.jpg"
+      },
+      "Nguyễn Văn Quảng": {
+        "file": "assets/images/official/leader/nguyen-van-quang.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260122/Nguyen_Van_Quang_a3058.png"
+      },
+      "Nguyễn Đình Khang": {
+        "file": "assets/images/official/leader/nguyen-dinh-khang.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260119/nguyen-dinh-khang_450de.jpg"
+      },
+      "Ngô Văn Tuấn": {
+        "file": "assets/images/official/leader/ngo-van-tuan.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260127/ngo-van-tuan_7c273.jpg"
+      },
+      "Nông Đức Mạnh": {
+        "file": "assets/images/official/leader/nong-duc-manh.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/9e78e570feec8f3e9fc4ab50b76a5103dong-chi-nong-duc-manh.jpg"
+      },
+      "Phan Văn Giang": {
+        "file": "assets/images/official/leader/phan-van-giang.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260122/Phan_Van_Giang_c706c.png"
+      },
+      "Phạm Đức Ấn": {
+        "file": "assets/images/official/leader/pham-duc-an.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260123/Pham_Duc_An_c92f8.png"
+      },
+      "Trường Chinh": {
+        "file": "assets/images/official/leader/truong-chinh.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/fb7499ed9878bb1d8a7e82e3928404caTruong-Chinh.jpg"
+      },
+      "Trần Cẩm Tú": {
+        "file": "assets/images/official/leader/tran-cam-tu.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260127/tran-cam-tu_0189d.jpg"
+      },
+      "Trần Hồng Minh": {
+        "file": "assets/images/official/leader/tran-hong-minh.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260120/tran-hong-minh_7cb17.png"
+      },
+      "Trần Phú": {
+        "file": "assets/images/official/leader/tran-phu.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/6256571965b3adca941cddc1b3915641Tran_Phu.jpg"
+      },
+      "Trần Sỹ Thanh": {
+        "file": "assets/images/official/leader/tran-sy-thanh.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260122/tran_sy_thanh_5ce5b.jpg"
+      },
+      "Trần Thanh Mẫn": {
+        "file": "assets/images/official/leader/tran-thanh-man.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260212/tran-thanh-man_825dc.jpg"
+      },
+      "Trịnh Việt Hùng": {
+        "file": "assets/images/official/leader/trinh-viet-hung.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260126/trinh-viet-hung_e988f.jpg"
+      },
+      "Trịnh Văn Quyết": {
+        "file": "assets/images/official/leader/trinh-van-quyet.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Bộ Chính trị/Ban Bí thư khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260129/trinh-van-quyet_2528e.jpg"
+      },
+      "Tô Lâm": {
+        "file": "assets/images/official/leader/to-lam.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/e0534be418aaf1e43b1060624104be5eDefault21TL.jpg"
+      },
+      "Vũ Hải Quân": {
+        "file": "assets/images/official/leader/vu-hai-quan.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260122/vu-hai-quan_134b9.jpg"
+      },
+      "Đào Hồng Lan": {
+        "file": "assets/images/official/leader/dao-hong-lan.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260119/Dao_Hong_Lan_7c37d.png"
+      },
+      "Đặng Xuân Phong": {
+        "file": "assets/images/official/leader/dang-xuan-phong.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Ủy viên BCH Trung ương khóa XIV",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/2006988/20260120/dang-xuan-phong_a0e5e.png"
+      },
+      "Đỗ Mười": {
+        "file": "assets/images/official/leader/do-muoi.jpg",
+        "source": "Ảnh chân dung chính thức – tulieuvankien – Tổng Bí thư qua các thời kỳ",
+        "url": "https://tulieuvankien.dangcongsan.vn/upload/3000006/20251024/768522318f56088a8b47ce9962add4f5Do_Muoi.jpg"
+      }
+    }
+  }
+}

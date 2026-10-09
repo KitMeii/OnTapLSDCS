@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="720" viewBox="0 0 600 720">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8f151c"/><stop offset="1" stop-color="#c62828"/></linearGradient></defs>
+<rect width="600" height="720" rx="36" fill="#f8fafc"/>
+<rect x="18" y="18" width="564" height="684" rx="30" fill="none" stroke="#e4e7ec" stroke-width="4"/>
+<circle cx="300" cy="228" r="112" fill="#d0d5dd"/>
+<path d="M105 550c0-118 87-214 195-214s195 96 195 214v45H105z" fill="#d0d5dd"/>
+<rect x="65" y="565" width="470" height="106" rx="24" fill="url(#g)"/>
+<text x="300" y="610" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="white">Nguyễn Hải Ninh</text>
+
+</svg>

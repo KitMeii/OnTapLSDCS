@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#8d141c">
+  <meta name="description" content="Lịch Sử Đảng Cộng Sản Việt Nam – web ôn tập theo thời kỳ, tổ chức, đề cương và trắc nghiệm">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Lịch Sử Đảng Cộng Sản Việt Nam</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/patch-v7.css">
+  <link rel="stylesheet" href="assets/css/patch-v9.css">
+  <link rel="stylesheet" href="assets/css/patch-v10.css">
+  <link rel="stylesheet" href="assets/css/patch-v11.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Noto+Serif:wght@600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/patch-v12.css">
+  <link rel="stylesheet" href="assets/css/patch-v13.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <a class="brand" href="#tong-quan" aria-label="Trang tổng quan">
+        <span class="brand-emblem-wrap">
+          <img class="brand-emblem remote-emblem" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Communist_Party_of_Vietnam_flag_logo.svg" alt="Đảng huy Đảng Cộng sản Việt Nam" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <img class="brand-emblem fallback-emblem" src="assets/images/icon.svg" alt="Biểu trưng dự phòng" style="display:none">
+        </span>
+        <span class="brand-copy"><strong>LỊCH SỬ ĐẢNG CỘNG SẢN VIỆT NAM</strong><small>1930 → 2026 · học theo thời kỳ</small></span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="Điều hướng chính">
+        <a data-route="tong-quan" href="#tong-quan">TỔNG QUAN</a>
+        <a data-route="lich-su" href="#lich-su">LỊCH SỬ</a>
+        <a data-route="to-chuc" href="#to-chuc">TỔ CHỨC</a>
+        <a data-route="de-cuong" href="#de-cuong">ĐỀ CƯƠNG</a>
+        <a data-route="trac-nghiem" href="#trac-nghiem">TRẮC NGHIỆM</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page active" id="page-tong-quan" data-page="tong-quan">
+      <div class="hero v12-hero">
+        <div class="shell v12-hero-grid">
+          <div class="v12-hero-copy">
+            <span class="v12-hero-eyebrow">Đảng Cộng sản Việt Nam quang vinh muôn năm!</span>
+            <blockquote class="v12-quote">
+              <h1><span class="l l1">“Dân ta phải biết sử ta,</span><br><span class="l">Cho tường gốc tích nước nhà Việt Nam.”</span></h1>
+              <cite>— Chủ tịch Hồ Chí Minh, <i>Lịch sử nước ta</i> (1942)</cite>
+            </blockquote>
+            <p class="v12-hero-lead">Ôn tập học phần Lịch sử Đảng Cộng sản Việt Nam theo trục thời kỳ — từ mùa Xuân năm 1930 đến Đại hội XIV: hiểu bối cảnh, nắm đường lối, nhớ chắc những mốc son của cách mạng.</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#lich-su">Mở dòng lịch sử</a>
+              <a class="button ghost" href="#trac-nghiem">Luyện đề 60 phút</a>
+            </div>
+          </div>
+          <div class="v12-hero-media">
+            <img src="assets/images/official/overview/33.jpg" alt="Chủ tịch Hồ Chí Minh, C. Mác, V.I. Lênin trên nền cờ Đảng" width="870" height="544" loading="eager">
+          </div>
+        </div>
+      </div>
+      <div class="shell page-pad" id="overviewMount"></div>
+    </section>
+
+    <section class="page" id="page-lich-su" data-page="lich-su">
+      <div class="page-head shell">
+        <div><span class="eyebrow dark">TRỤC LỚN NHẤT: THỜI KỲ</span><h2>Dòng lịch sử được lồng theo bối cảnh</h2><p>Mỗi thời kỳ là một dashboard hoàn chỉnh: bối cảnh → kinh tế – xã hội → mâu thuẫn → lãnh đạo → Đại hội → văn kiện → phong trào → 💡 khái niệm → kết quả, hạn chế → liên hệ đề cương nguyên văn.</p></div>
+      </div>
+      <div class="shell page-pad">
+        <div class="history-guide"><span>01 Bối cảnh</span><i>→</i><span>02 Lãnh đạo</span><i>→</i><span>03 Đại hội & văn kiện</span><i>→</i><span>04 Phong trào</span><i>→</i><span>💡 Khái niệm</span><i>→</i><span>05 Kết quả & đề cương</span></div>
+        <div id="historyMount"></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-to-chuc" data-page="to-chuc">
+      <div class="page-head shell">
+        <div><span class="eyebrow dark">DASHBOARD TỔ CHỨC</span><h2>Ai đứng đầu? Cơ quan nào? Nhiệm kỳ nào?</h2><p>Không trình bày kiểu cây thư mục. Mỗi nhóm là một dashboard: người đứng đầu hiện nay, vai trò, cơ quan lớn và lãnh đạo qua nhiệm kỳ gần nhất. Dữ liệu hiện hành cập nhật đến 07/10/2026.</p></div>
+      </div>
+      <div class="shell page-pad">
+        <div class="org-tabs" id="orgTabs"></div>
+        <div id="organizationMount"></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-de-cuong" data-page="de-cuong">
+      <div class="page-head shell syllabus-head">
+        <div><span class="eyebrow dark">NGUYÊN VĂN FILE WORD</span><h2>Đề cương 40 vấn đề</h2><p>“Đáp án gốc” giữ nguyên 100% nội dung trong <b>Decuong26_27.docx</b>. Phần “Điểm chú ý” và “Câu hỏi phụ” nằm riêng bên dưới, không thay thế nội dung gốc.</p></div>
+        <div class="progress-pill"><span id="learnedCount">0</span><small>/ 40 đã học</small></div>
+      </div>
+      <div class="shell page-pad">
+        <div class="syllabus-tools">
+          <label class="search-box grow"><span>⌕</span><input id="syllabusSearch" placeholder="Tìm trong 40 vấn đề..." autocomplete="off"></label>
+          <select id="syllabusGroup" aria-label="Lọc nhóm"><option value="all">Tất cả nhóm</option></select>
+        </div>
+        <div id="syllabusMount"></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-trac-nghiem" data-page="trac-nghiem">
+      <div class="page-head shell">
+        <div><span class="eyebrow dark">5 BỘ ĐỀ × 50 CÂU</span><h2>Trắc nghiệm Lịch sử Đảng</h2><p>Mỗi đề 60 phút. Chỉ được nộp khi đã trả lời đủ 50 câu; hết giờ hệ thống tự chấm. Không lưu lịch sử bài thi.</p></div>
+      </div>
+      <div class="shell page-pad" id="quizMount"></div>
+    </section>
+  </main>
+
+  <div class="full-modal" id="detailModal" aria-hidden="true">
+    <div class="modal-topbar"><div id="modalTitleMini">CHI TIẾT</div><button id="modalClose" aria-label="Đóng">×</button></div>
+    <div class="modal-scroll"><div class="shell" id="modalBody"></div></div>
+  </div>
+  <div class="scrim" id="scrim"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <footer class="site-footer v10-footer v11-footer" data-v10="1">
+    <div class="shell v10-footer-grid">
+      <section><div class="v10-footer-brand"><img src="assets/images/icon.svg" alt="Biểu trưng"><div><b>Lịch Sử Đảng Cộng Sản Việt Nam</b><small>Học theo thời kỳ · hiểu bối cảnh · nối quyết sách với kết quả.</small></div></div><p class="copyright">© Vũ Nguyễn Tuấn Kiệt</p></section>
+      <section><h4>Nội dung &amp; nguồn</h4><p>Phần lịch sử tổ chức theo 11 thời kỳ; các hồ sơ quan trọng liên kết tới Tư liệu – Văn kiện Đảng, Bảo tàng Lịch sử Quốc gia và báo chí chính thống. Ảnh chân dung: Wikimedia Commons và cổng thông tin chính thức.</p><p><a href="mailto:tuankiet4225@gmail.com">tuankiet4225@gmail.com</a></p></section>
+      <section class="v10-footer-qr"><h4>Mở trên điện thoại</h4><img id="qrImage" alt="Mã QR truy cập website" width="128" height="128"><small id="qrHint">QR sẽ tự hiện khi website chạy bằng HTTPS.</small></section>
+    </div>
+  </footer>
+
+  <script src="data/overview.js"></script>
+  <script src="data/history-official-v6.js"></script>
+  <script src="data/leader-bios-v6.js"></script>
+  <script src="data/leader-bios-v7.js"></script>
+  <script src="data/enrichment-v7.js"></script>
+  <script src="data/deep-periods-v9.js"></script>
+  <script src="data/concept-details-v9.js"></script>
+  <script src="data/period-expert-v10.js"></script>
+  <script src="data/leaders.js"></script>
+  <script src="data/portraits.js"></script>
+  <script src="data/history-integrated.js"></script>
+  <script src="data/lectures.js"></script>
+  <script src="data/lecture-timing.js"></script>
+  <script src="data/lecture-timing-nam.js"></script>
+  <script src="data/organization-dashboard.js"></script>
+  <script src="data/syllabus.js"></script>
+  <script src="data/syllabus-followup.js"></script>
+  <script src="data/quiz.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/patch-v7.js"></script>
+  <script src="assets/js/patch-v9.js"></script>
+  <script src="assets/js/patch-v10.js"></script>
+  <script src="assets/js/patch-v11.js"></script>
+  <script src="assets/js/patch-v12.js"></script>
+  <script src="assets/js/patch-v13.js"></script>
+</body>
+</html>

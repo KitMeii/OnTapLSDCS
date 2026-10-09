@@ -1,0 +1,45 @@
+/* V13 — Mục lục thời kỳ (navigation pane kiểu Word) cho trang Lịch sử */
+.v13-toc{margin:4px 0 10px;padding:10px 4px 6px 8px;border-left:3px solid var(--c-red);background:var(--c-red-soft);border-radius:0 var(--r) var(--r) 0;font-size:.86rem;line-height:1.4}
+.v13-toc-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 6px 2px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-red-dk)}
+.v13-toc ol{list-style:none;margin:0;padding:0}
+.v13-g{margin:1px 0}
+.v13-row{display:flex;align-items:flex-start;gap:2px}
+.v13-caret,.v13-caret-sp{flex:0 0 20px;width:20px;height:24px}
+.v13-caret{border:0;background:none;cursor:pointer;color:var(--c-muted);padding:0;position:relative}
+.v13-caret::before{content:"";position:absolute;left:6px;top:8px;border:5px solid transparent;border-left:6px solid currentColor;transition:transform .15s}
+.v13-g.is-open>.v13-row .v13-caret::before{transform:rotate(90deg);transform-origin:3px 5px}
+.v13-caret:hover{color:var(--c-red)}
+.v13-toc a{display:block;flex:1;min-width:0;padding:3px 6px;border-radius:4px;color:var(--c-ink);text-decoration:none;font-weight:600}
+.v13-toc a:hover{background:#fff;color:var(--c-red)}
+.v13-toc a.is-now{background:var(--c-red);color:#fff}
+.v13-kids{display:none;margin:2px 0 6px 22px!important;border-left:1px solid var(--c-line)}
+.v13-g.is-open>.v13-kids{display:block}
+.v13-kids a{font-weight:500;color:var(--c-text);padding:3px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v13-kids .v13-head>a{font-weight:700;color:var(--c-ink)}
+.v13-kids .v13-sub>a{padding-left:18px;font-size:.82rem;color:var(--c-muted)}
+.v13-kids .v13-sub>a.is-now,.v13-kids a.is-now{color:#fff}
+/* Khối đích khi bấm: chừa chỗ cho header dính và nháy viền để dễ nhận ra */
+#historyMount .v7-history-main [class]{scroll-margin-top:96px}
+.v13-flash{outline:3px solid var(--c-gold);outline-offset:3px;transition:outline-color 1.2s}
+/* Điện thoại / tablet: ẩn mục lục trong dải thời kỳ ngang, dùng nút nổi + bảng trượt */
+.v13-fab{display:none;position:fixed;left:16px;bottom:24px;z-index:1100;align-items:center;gap:6px;height:44px;padding:0 16px;border:0;border-radius:22px;background:var(--c-red);color:#fff;font:600 .92rem var(--f-body);box-shadow:0 6px 16px rgba(0,0,0,.2);cursor:pointer}
+body.v12-has-player .v13-fab{bottom:150px}
+.v13-sheet{position:fixed;inset:0;z-index:1300}
+.v13-sheet[hidden]{display:none}
+.v13-sheet-scrim{position:absolute;inset:0;background:rgba(20,16,12,.45)}
+.v13-sheet-panel{position:absolute;left:0;right:0;bottom:0;max-height:78vh;display:flex;flex-direction:column;background:var(--c-paper);border-top:4px solid var(--c-red);border-radius:12px 12px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.2)}
+.v13-sheet-top{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--c-line)}
+.v13-sheet-top b{font-family:var(--f-head);color:var(--c-red-dk)}
+.v13-sheet-top button{width:36px;height:36px;border:0;background:none;font-size:20px;cursor:pointer;color:var(--c-ink)}
+.v13-sheet-body{overflow:auto;margin:0;border-left:0;border-radius:0;background:none;padding:8px 12px 24px;font-size:.95rem}
+.v13-sheet-body .v13-toc-title{display:none}
+.v13-sheet-body a{padding:7px 8px}
+.v13-sheet-body .v13-kids a{white-space:normal}
+html.v13-lock,html.v13-lock body{overflow:hidden}
+@media (max-width:1100px){
+  #historyMount .v7-periods .v13-toc{display:none}
+  .v13-fab.show{display:inline-flex}
+  #historyMount .v7-history-main [class]{scroll-margin-top:160px}
+}
+@media (max-width:720px){#historyMount .v7-history-main [class]{scroll-margin-top:150px}}
+@media (prefers-reduced-motion:reduce){.v13-caret::before,.v13-flash{transition:none}}
