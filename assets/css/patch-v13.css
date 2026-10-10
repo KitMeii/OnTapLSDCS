@@ -43,18 +43,23 @@ html.v13-lock,html.v13-lock body{overflow:hidden}
 }
 @media (max-width:720px){#historyMount .v7-history-main [class]{scroll-margin-top:150px}}
 @media (prefers-reduced-motion:reduce){.v13-caret::before,.v13-flash{transition:none}}
-/* Bảng trượt: khối "Các thời kỳ" để nhìn tổng quan 11 thời kỳ và chuyển nhanh */
-.v13-periods-t{display:flex;align-items:center;gap:8px;margin:6px 0 6px 4px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-red-dk)}
-.v13-periods-t small{padding:1px 7px;border-radius:10px;background:var(--c-red-soft);font-size:.72rem}
-.v13-periods{list-style:none;margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid var(--c-line)}
-.v13-periods button{display:grid;grid-template-columns:26px auto;column-gap:8px;width:100%;text-align:left;padding:7px 8px;border:0;border-radius:4px;background:none;cursor:pointer;font:inherit;color:var(--c-ink)}
-.v13-periods i{grid-row:span 2;align-self:center;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:var(--c-red-soft);color:var(--c-red-dk);font-style:normal;font-size:.75rem;font-weight:700}
-.v13-periods b{font-size:.92rem}
-.v13-periods span{font-size:.8rem;color:var(--c-muted);line-height:1.35}
-.v13-periods button:hover{background:var(--c-red-soft)}
-.v13-periods button.is-now{background:var(--c-red);color:#fff}
-.v13-periods button.is-now i{background:#fff;color:var(--c-red)}
-.v13-periods button.is-now span{color:rgba(255,255,255,.85)}
+/* Bảng trượt: cây 2 tầng giống mục lục Tổ chức — thời kỳ → các phần của thời kỳ */
+.v13-ptree .v13-pg{border-bottom:1px solid var(--c-line2)}
+.v13-ptree .v13-pg:last-child{border-bottom:0}
+.v13-ptree .v13-pg>.v13-row .v13-caret{height:48px}
+.v13-ptree .v13-pg>.v13-row .v13-caret::before{top:19px}
+.v13-pg.is-open>.v13-row .v13-caret::before{transform:rotate(90deg);transform-origin:3px 5px}
+.v13-pbtn{flex:1;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 6px;border:0;border-radius:4px;background:none;text-align:left;cursor:pointer;font:inherit;color:var(--c-ink)}
+.v13-pl{min-width:0}
+.v13-pl b{display:block;font-size:1rem;font-weight:700}
+.v13-pl small{display:block;margin-top:1px;font-size:.8rem;line-height:1.35;color:var(--c-muted)}
+.v13-pbtn i{flex:0 0 auto;min-width:24px;padding:1px 7px;border-radius:10px;background:var(--c-red-soft);color:var(--c-red-dk);font-style:normal;font-size:.75rem;font-weight:700;text-align:center}
+.v13-pbtn:hover b{color:var(--c-red)}
+.v13-pcur>.v13-row .v13-pbtn b{color:var(--c-red-dk)}
+.v13-pcur>.v13-row .v13-pbtn i{background:var(--c-red);color:#fff}
+.v13-psecs{display:none;margin:0 0 10px 22px;padding-left:4px;border-left:1px solid var(--c-line)}
+.v13-pg.is-open>.v13-psecs{display:block}
+.v13-psecs .v13-toc-list>.v13-g>.v13-row a{font-weight:600}
 /* Điện thoại: dải thời kỳ chỉ hiện mốc năm dạng chip để thấy được nhiều thời kỳ cùng lúc */
 @media (max-width:720px){
   #historyMount .v7-periods{gap:6px!important;padding:6px!important}
