@@ -86,7 +86,7 @@ function build(){
   if(!inAside){inAside=pane();var act=$('.v7-period-btn.active',aside);(act&&act.nextSibling)?aside.insertBefore(inAside,act.nextSibling):aside.appendChild(inAside)}
   else{var act2=$('.v7-period-btn.active',aside);if(act2&&act2.nextSibling!==inAside)aside.insertBefore(inAside,act2.nextSibling)}
   inAside.innerHTML=html;
-  sheet().querySelector('.v13-sheet-body').innerHTML=html;
+  sheet().querySelector('.v13-sheet-body').innerHTML=periodsHtml()+html;
   spy();
 }
 
@@ -100,6 +100,13 @@ function sheet(){
   f.addEventListener('click',function(){s.hidden=false;document.documentElement.classList.add('v13-lock');var a=$('.v13-sheet-body a.is-now',s);if(a)a.scrollIntoView({block:'center'})});
   document.body.appendChild(f);T.fab=f;fabState();
   return s;
+}
+// Bảng trượt (điện thoại): khối "Các thời kỳ" liệt kê đủ 11 thời kỳ để nhìn tổng quan và chuyển nhanh
+function periodsHtml(){
+  var ps=(window.HISTORY_INTEGRATED||{}).periods||[],act=($('#historyMount .v7-period-btn.active')||{getAttribute:function(){return ''}}).getAttribute('data-v7-period');
+  return '<div class="v13-periods-t">Các thời kỳ <small>'+ps.length+'</small></div><ol class="v13-periods">'+ps.map(function(p,i){
+    return '<li><button type="button" data-v13-period="'+esc(p.id)+'" class="'+(p.id===act?'is-now':'')+'"'+(p.id===act?' aria-current="true"':'')+'><i>'+(i+1)+'</i><b>'+esc(p.label)+'</b><span>'+esc(p.title)+'</span></button></li>'}).join('')+
+    '</ol><div class="v13-periods-t">Mục lục thời kỳ đang xem</div>';
 }
 function closeSheet(){if(T.sheet&&!T.sheet.hidden){T.sheet.hidden=true;document.documentElement.classList.remove('v13-lock')}}
 function fabState(){if(T.fab)T.fab.classList.toggle('show',MOBILE.matches&&location.hash==='#lich-su'&&!!$('#historyMount .v7-history-main'))}
@@ -128,6 +135,10 @@ document.addEventListener('click',function(e){
     $$('.v13-g[data-g="'+gi+'"]').forEach(function(li){li.classList.toggle('is-open',!!T.open[gi]);var b=$('[data-caret]',li);if(b)b.setAttribute('aria-expanded',String(!!T.open[gi]))});return}
   var a=e.target.closest('.v13-toc a[data-i]');
   if(a){e.preventDefault();var inSheet=!!a.closest('.v13-sheet');closeSheet();var i=Number(a.getAttribute('data-i'));setTimeout(function(){go(i)},inSheet?60:0);return}
+  var pb=e.target.closest('.v13-sheet [data-v13-period]');
+  if(pb){e.preventDefault();closeSheet();var btn=$('#historyMount [data-v7-period="'+pb.getAttribute('data-v13-period')+'"]');
+    if(btn&&!btn.classList.contains('active'))btn.click();
+    setTimeout(function(){var h=$('#historyMount .v7-history-main');if(h)window.scrollTo({top:Math.max(0,h.getBoundingClientRect().top+window.pageYOffset-offset()),behavior:'instant'})},80);return}
   if(e.target.closest('.v13-sheet [data-close]'))closeSheet();
 });
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeSheet()});

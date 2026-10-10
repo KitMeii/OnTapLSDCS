@@ -43,3 +43,22 @@ html.v13-lock,html.v13-lock body{overflow:hidden}
 }
 @media (max-width:720px){#historyMount .v7-history-main [class]{scroll-margin-top:150px}}
 @media (prefers-reduced-motion:reduce){.v13-caret::before,.v13-flash{transition:none}}
+/* Bảng trượt: khối "Các thời kỳ" để nhìn tổng quan 11 thời kỳ và chuyển nhanh */
+.v13-periods-t{display:flex;align-items:center;gap:8px;margin:6px 0 6px 4px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--c-red-dk)}
+.v13-periods-t small{padding:1px 7px;border-radius:10px;background:var(--c-red-soft);font-size:.72rem}
+.v13-periods{list-style:none;margin:0 0 14px;padding:0 0 12px;border-bottom:1px solid var(--c-line)}
+.v13-periods button{display:grid;grid-template-columns:26px auto;column-gap:8px;width:100%;text-align:left;padding:7px 8px;border:0;border-radius:4px;background:none;cursor:pointer;font:inherit;color:var(--c-ink)}
+.v13-periods i{grid-row:span 2;align-self:center;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;background:var(--c-red-soft);color:var(--c-red-dk);font-style:normal;font-size:.75rem;font-weight:700}
+.v13-periods b{font-size:.92rem}
+.v13-periods span{font-size:.8rem;color:var(--c-muted);line-height:1.35}
+.v13-periods button:hover{background:var(--c-red-soft)}
+.v13-periods button.is-now{background:var(--c-red);color:#fff}
+.v13-periods button.is-now i{background:#fff;color:var(--c-red)}
+.v13-periods button.is-now span{color:rgba(255,255,255,.85)}
+/* Điện thoại: dải thời kỳ chỉ hiện mốc năm dạng chip để thấy được nhiều thời kỳ cùng lúc */
+@media (max-width:720px){
+  #historyMount .v7-periods{gap:6px!important;padding:6px!important}
+  #historyMount .v7-period-btn{width:auto!important;min-width:0!important;flex:0 0 auto!important;padding:8px 12px!important;margin:0!important}
+  #historyMount .v7-period-btn span{display:none!important}
+  #historyMount .v7-period-btn b{font-size:.92rem;white-space:nowrap}
+}
