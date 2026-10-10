@@ -19,14 +19,20 @@ LichSuDangStudy_CodeWeb/               ← THƯ MỤC WEBSITE (đưa nguyên th�
 │   │   ├── patch-v11.css              Ảnh chân dung, tô đậm nội dung quan trọng
 │   │   ├── patch-v12.css              ★ Giao diện cuối cùng: phong cách chính thống, mobile,
 │   │   │                                trình phát bài giảng, chế độ video, hiệu ứng cuộn
-│   │   └── patch-v13.css              Mục lục thời kỳ (kiểu navigation pane của Word)
+│   │   ├── patch-v13.css              Mục lục thời kỳ (kiểu navigation pane của Word)
+│   │   ├── patch-v14.css              Mục lục trang Tổ chức
+│   │   ├── patch-v15.css              Video toàn màn hình kiểu YouTube
+│   │   └── patch-v16.css              Trang Tổng quan dạng "bức tranh"
 │   ├── js/                            Chức năng (nạp theo thứ tự)
 │   │   ├── app.js                     Điều hướng 5 mục, Đề cương (Điểm chú ý, câu hỏi phụ), Trắc nghiệm
 │   │   ├── patch-v7.js                Dựng nội dung Tổng quan / Lịch sử / Tổ chức
 │   │   ├── patch-v9.js, patch-v10.js  Chèn lớp học sâu, hồ sơ Tuyên ngôn, ảnh phong trào
 │   │   ├── patch-v11.js               Tô đậm %, văn kiện; hồ sơ Tổng Bí thư
 │   │   ├── patch-v12.js               ★ Bài giảng audio + chế độ video + hiệu ứng cuộn
-│   │   └── patch-v13.js               Mục lục thời kỳ: bấm để cuộn tới hội nghị, sự kiện, phong trào…
+│   │   ├── patch-v13.js               Mục lục thời kỳ: bấm để cuộn tới hội nghị, sự kiện, phong trào…
+│   │   ├── patch-v14.js               Mục lục Tổ chức: khối (Đảng, Nhà nước…) thu gọn → bấm xổ cơ quan
+│   │   ├── patch-v15.js               Video toàn màn hình: nút ⛶, tự xoay trên iPhone, chạm 2 lần tua ±10 giây
+│   │   └── patch-v16.js               Tổng quan: con số, 5 chặng, 14 Đại hội, văn kiện, kinh tế, lạm phát, lãnh đạo
 │   ├── images/
 │   │   ├── icon.svg                   Biểu trưng
 │   │   ├── official/leader/           50 ảnh chân dung chính thức (tulieuvankien.dangcongsan.vn)

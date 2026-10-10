@@ -1,0 +1,23 @@
+/* V14 — Mục lục trang Tổ chức (dùng chung kiểu .v13-toc của trang Lịch sử) */
+.v7-org.v14-on{grid-template-columns:300px minmax(0,1fr)!important}
+.v7-org.v14-on>.v7-org-groups,.v7-org.v14-on>.v7-org-entities{display:none!important}
+.v14-org-toc{position:sticky;top:96px;max-height:calc(100vh - 116px);overflow:auto;margin:0;padding:12px 8px 10px 10px;background:var(--c-paper);border:1px solid var(--c-line);border-left:3px solid var(--c-red);border-radius:var(--r)}
+.v14-group{flex:1;min-width:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 6px;border:0;background:none;border-radius:4px;font:700 .95rem var(--f-body);color:var(--c-ink);text-align:left;cursor:pointer}
+.v14-group small{flex:0 0 auto;min-width:24px;padding:1px 7px;border-radius:10px;background:var(--c-red-soft);color:var(--c-red-dk);font-size:.75rem;font-weight:700;text-align:center}
+.v14-group:hover{color:var(--c-red)}
+.v14-cur>.v13-row .v14-group{color:var(--c-red-dk)}
+.v14-org-toc .v13-caret{height:32px}
+.v14-org-toc .v13-caret::before{top:11px}
+.v14-org-toc .v13-kids a{white-space:normal;padding:6px 8px}
+.v14-org-toc .v13-kids a b{display:block;font-weight:600;color:inherit;line-height:1.35}
+.v14-org-toc .v13-kids a span{display:block;font-size:.8rem;color:var(--c-muted);line-height:1.35}
+.v14-org-toc .v13-kids a.is-now span{color:rgba(255,255,255,.85)}
+/* Bảng trượt (điện thoại): bỏ khung của mục lục cột trái */
+.v14-sheet .v14-org-toc{position:static;max-height:none;overflow:auto;border:0;border-radius:0;padding:8px 12px 24px}
+@media (max-width:1100px){
+  /* Giống trang Lịch sử: ẩn mục lục trong trang, dùng nút "Mục lục" nổi + bảng trượt */
+  .v7-org.v14-on{grid-template-columns:1fr!important}
+  .v7-org.v14-on>.v14-org-toc{display:none!important}
+  .v14-group{padding:9px 6px;font-size:1rem}
+  .v14-org-toc .v13-kids a{padding:9px 8px}
+}

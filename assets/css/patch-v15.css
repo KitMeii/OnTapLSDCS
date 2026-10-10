@@ -1,0 +1,24 @@
+/* V15 — Chế độ video toàn màn hình kiểu YouTube */
+.v12v.v15-fs{background:#000;justify-content:center;padding:0}
+.v12v.v15-fs .v12v-wrap{box-shadow:none}
+.v12v.v15-fs .v12v-rotate{display:none!important}
+/* iPhone cầm dọc: xoay cả khung 90° để xem ngang như YouTube (kích thước đặt bằng JS) */
+.v12v.v15-rot{position:fixed;inset:auto;transform:rotate(90deg);transform-origin:0 0}
+/* Thanh điều khiển nổi trên video, tự ẩn */
+.v12v.v15-fs .v12v-ui{position:absolute;left:0;right:0;bottom:0;width:100%;max-width:none;flex-wrap:nowrap;padding:28px 16px 12px;padding-bottom:max(12px,env(safe-area-inset-bottom));background:linear-gradient(transparent,rgba(0,0,0,.75));transition:opacity .25s;z-index:5}
+.v12v.v15-fs .v12v-seek{order:0;flex:1 1 auto;height:6px;margin:0}
+.v12v.v15-fs .v12v-time{margin-right:0}
+.v12v.v15-fs .v12v-ui select{order:0;flex:0 1 220px;max-width:220px}
+.v12v.v15-fs.v15-idle .v12v-ui{opacity:0;pointer-events:none}
+.v12v.v15-fs.v15-idle{cursor:none}
+.v12v [data-v="fs"]{font-size:18px}
+/* Gợi ý tua khi chạm 2 lần */
+.v15-flash{position:absolute;top:50%;transform:translateY(-50%);padding:14px 22px;border-radius:40px;background:rgba(0,0,0,.55);color:#fff;font:700 18px var(--f-body);pointer-events:none;animation:v15fade .65s ease-out forwards;z-index:4}
+.v15-flash.back{left:8%}.v15-flash.fwd{right:8%}
+@keyframes v15fade{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+@media (max-width:560px),(max-height:500px){
+  .v12v.v15-fs .v12v-ui{gap:6px;padding:20px 10px 8px}
+  .v12v.v15-fs .v12v-ui select{display:none}
+  .v12v.v15-fs .v12v-ui button{height:32px;min-width:38px}
+}
+@media (prefers-reduced-motion:reduce){.v15-flash{animation:none;opacity:.9}.v12v.v15-fs .v12v-ui{transition:none}}
